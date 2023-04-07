@@ -1,0 +1,47 @@
+@use "./variable";
+
+@mixin rounded {
+	border-radius: variable.$btn_radius;
+}
+
+@mixin flexColumn {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin flexRow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin font-face($name, $file, $weight: normal, $style: normal) {
+	@font-face {
+		font-family: "#{$name}";
+		src: url("#{$file}");
+		font-style: $style;
+		font-weight: $weight;
+	}
+}
+
+@mixin responsive($device) {
+	@if $device == "mobileS" {
+		@media screen and (max-width: variable.$maxMobileS) {
+			@content;
+		}
+	} @else if $device == "mobileL" {
+		@media screen and (max-width: variable.$maxMobileL) and (min-width: variable.$minMobileL) {
+			@content;
+		}
+	} @else if $device == "tablet" {
+		@media screen and (max-width: variable.$maxTablet) and (min-width: variable.$minTablet) {
+			@content;
+		}
+	} @else if $device == "laptop" {
+		@media screen and (max-width: variable.$maxLaptop) and (min-width: variable.$minLaptop) {
+			@content;
+		}
+	}
+}

@@ -1,0 +1,61 @@
+@use "components";
+@use "containers";
+@use "helpers";
+
+@include helpers.font-face(
+	"Noto Sans KR",
+	"https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+);
+
+@include helpers.font-face(
+	"Montserrat",
+	"https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+);
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	ul,
+	li {
+		list-style: none;
+	}
+	a {
+		text-decoration: none;
+	}
+	width: 100%;
+}
+
+body {
+	@include helpers.flexColumn;
+	width: 100%;
+	gap: 20px;
+	font-family: "Noto Sans KR", sans-serif;
+	// display: grid;
+	// grid-template-columns: 1fr;
+	// grid-template-rows: 212px auto 423px;
+	// row-gap: 20px;
+}
+
+main {
+	@include helpers.flexColumn;
+	width: 100%;
+	background-color: yellow;
+
+	// @include helpers.responsive("laptop") {
+	// 	padding: 0 142px;
+	// }
+	// @include helpers.responsive("tablet") {
+	// 	padding: 0 107px;
+	// }
+	// @include helpers.responsive("mobileL") {
+	// 	padding: 0 24px;
+	// }
+	// @include helpers.responsive("mobileS") {
+	// 	padding: 0 16px;
+	// }
+
+	// display: grid;
+	// grid-template-columns: 1130px;
+	// justify-content: center;
+}

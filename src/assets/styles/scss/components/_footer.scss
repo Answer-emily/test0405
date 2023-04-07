@@ -1,0 +1,61 @@
+@use "../helpers";
+
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 423px;
+	padding-top: 20px;
+	color: orange;
+	background-color: black;
+	.footerInner {
+		@include helpers.flexColumn;
+		width: 1130px;
+		// display: grid;
+		// grid-template-rows: 135px 48px 106px 41px;
+		// align-content: flex-start;
+
+		> * {
+			@include helpers.flexRow;
+			border-bottom: 1px solid #fff;
+		}
+		.box1 {
+			ul {
+				@include helpers.flexRow;
+				height: 135px;
+				li {
+					height: 100%;
+					border-right: 1px solid #fff;
+				}
+			}
+		}
+		.box2 {
+			height: 48px;
+			display: flex;
+			justify-content: space-between;
+			.notice {
+				width: 50%;
+			}
+			.all {
+				width: 50%;
+				text-align: right;
+			}
+		}
+		.box3 {
+			height: 106px;
+			display: flex;
+			justify-content: space-between;
+			.con1 {
+				width: 40%;
+			}
+			.con2 {
+				width: 30%;
+			}
+		}
+		.box4 {
+			height: 41px;
+			justify-content: flex-start;
+		}
+	}
+}

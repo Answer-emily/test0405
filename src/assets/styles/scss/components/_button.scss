@@ -1,0 +1,15 @@
+@use "../helpers";
+
+button {
+	@include helpers.rounded;
+	width: 151px;
+	height: 48px;
+	outline: none;
+	border: none;
+	font-size: 16px;
+	font-weight: 600;
+	color: #fff;
+	cursor: pointer;
+	letter-spacing: -0.5px;
+	font-family: "Montserrat", sans-serif;
+}
